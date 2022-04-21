@@ -26,9 +26,13 @@ ________________________________________________________________________________
 
 6. Insert2 İkinci liste (Listenin istediğiniz bir yerine, istediğiniz bir şey ekleyin.)
 
-7. Remove1 Birinci liste (Listenin içindeki istediğiniz bir elemanı silmek için kullanın.)
+7. Remove1 Birinci liste (Listenin içindeki istediğiniz bir elemanı siler.)
 
-8. Remove2 İkinci liste (Listenin içindeki istediğiniz bir elemanı silmek için kullanın.)
+8. Remove2 İkinci liste (Listenin içindeki istediğiniz bir elemanı siler.)
+
+9. Pop1 Birinci liste (Listenin içideki istediğiniz sıradaki bir elemanı siler.)
+
+10. Pop2 İkinci liste (Listenin içideki istediğiniz sıradaki bir elemanı siler.)
 
 İşlemleri görmek için 'işlemler' yazın.
 Çıkmak için 'q' ya basın.
@@ -102,6 +106,22 @@ while True:
         _sil = input("Listenin içinden silmek istediğiniz elemanı hatasız yazınız :")
         ikinci_liste.remove(_sil)
         print("İkinci listenin son hali :",ikinci_liste)
+
+    elif islem == "9":
+        print("Birinci listenin son hali :",birinci_liste)
+        time.sleep(1)
+        sil2_= int(input("Silmek istediğiniz elemanın sırasını giriniz :"))
+        sil2_ = (sil2_ - 1)
+        birinci_liste.pop(sil2_)
+        print("Birinci listenin son hali :",birinci_liste)
+
+    elif islem == "10":
+        print("İkinci listenin son hali :",ikinci_liste)
+        time.sleep(1)
+        _sil2= int(input("Silmek istediğiniz elemanın sırasını giriniz :"))
+        _sil2 = (_sil2 - 1)
+        ikinci_liste.pop(_sil2)
+        print("Birinci listenin son hali :",ikinci_liste)    
 
     elif islem == "clear1":
         print("Birinci listenin şu anki hali :",birinci_liste)
